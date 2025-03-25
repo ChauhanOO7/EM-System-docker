@@ -1,0 +1,64 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    color: black;
+    background-image: url("../static/images/signup.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.signup
+{
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 4rem;
+    margin-left: 21rem;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.signup > h1
+{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form >input
+{
+    width: 80%;
+    height: 3.2rem;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    
+}
+
+form > button
+{
+    height: 3.5rem;
+    width: 70%;
+    margin-left: 1.17rem;
+    font-size: 1.2em;
+    font-weight: 800;
+    border-radius: 2rem;
+    cursor: pointer;
+    
+}
+
+::placeholder
+{
+    padding-left: 1rem;
+}
+

@@ -1,0 +1,259 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar*/
+
+.decnav
+{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.decnav > ul
+{
+    list-style-type: none;
+    font-size: 1.2em;
+    margin-top: 1rem ;
+    display: flex;
+    margin-left: 7rem;
+
+}
+
+.decnav > ul >li
+{
+    margin-left: 5rem;
+
+}
+
+.decnav > div
+{
+    font-size: 1.2em;
+    margin-right: 7rem;
+    display: flex;
+}
+
+.decnav > div > p
+{
+    margin-right: 7rem;
+}
+
+.decnav > div > button
+{
+    margin-top: 1rem;
+    width: 7rem;
+    font-weight: bold;
+    height: 2.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+th, td
+{
+    padding: 15px;
+    text-align: left;
+
+}
+
+/* loginpage */
+
+.loginpage
+{
+    width: 50%;
+    margin-left: 22rem;
+    margin-top: 10rem;
+    background-color: rgba(0, 0, 0, 0.205);
+    border-radius: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.loginpage > h1
+{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.loginpage > form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginpage > form > Label
+{
+    font-size: 1.2em;
+}
+
+.loginpage > form > input
+{
+    margin-bottom: 2rem;
+    width: 20rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+}
+
+.loginpage > form > button
+{
+    margin-top: 2rem;
+    width: 10rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+/* dashboard */
+
+.dashboard > h1
+{
+    background-color: rgba(0, 255, 255, 0.496);
+    margin-top: 0;
+}
+
+.dashboard > h2
+{
+    text-align: center;
+}
+
+/* employlist */
+
+.employlist > div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.employlist > div > p
+{
+    font-size: 1.2em;
+    
+}
+
+#create
+{
+    background-color: black;
+    color: white;
+    width: 10rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    
+}
+
+.employlist > div > label
+{
+    font-size: 1.3em;
+    
+}
+
+.employlist > div > input
+{
+    width: 15rem;
+    height: 2.2rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+}
+
+.employlist > div > button
+{
+    background-color: black;
+    color: white;
+    width: 10rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-size: 1.1em;
+}
+
+
+#btn1,#btn2
+{
+    background-color: black;
+    border: 0;
+    padding: 0.5rem;
+}
+th
+{
+    background-color: black;
+    color: white;
+}
+
+tr:hover {background-color: rgb(124, 219, 232);}
+
+#warning
+{
+    color: red;
+}
+
+
+/* createemploy */
+
+.createemploy > form
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25rem;
+    margin-top: 4rem;
+    justify-content: center;
+}
+
+.createemploy > form > span > input
+{
+    width: 25rem;
+    height: 2.3rem;
+    border-radius: 2rem;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+}
+
+.createemploy > form > button
+{
+    background-color: black;
+    color: white;
+    width: 10rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-size: 1.1em;
+    margin-left: 10rem;
+}
+
+#_desg
+{
+    margin-left: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+#_mobileno
+{
+    margin-left: 3.2rem;
+}
+
+.align
+{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.align > div
+{
+    margin-left: 5.2rem;
+}
