@@ -1,9 +1,9 @@
 pipeline{
     agent any
     environment{
-        MONGO_URL: Credentials('Mongo-url')
-        DOCKER_USER: Credentials('docker-user')
-        DOCKER_PAT: Credentials('docker-token')
+        MONGO_URL= credentials('Mongo-url')
+        DOCKER_USER= credentials('docker-user')
+        DOCKER_PAT= credentials('docker-token')
     }
     stages{
         stage('build images for backend and frontend'){
@@ -21,7 +21,7 @@ pipeline{
         }
         stage('deploy'){
             steps{
-                sh 'docker compose u -d'
+                sh 'docker compose up -d'
             }
 
         }
