@@ -2,8 +2,8 @@ pipeline{
     agent any
     environment{
         MONGO_URL= credentials('Mongo-url')
-        // DOCKER_USER= credentials('docker-user')
-        // DOCKER_PAT= credentials('docker-token')
+        DOCKER_USER= credentials('docker-user')
+        DOCKER_PAT= credentials('docker-token')
     }
     stages{
         stage('build images for backend and frontend'){
@@ -15,17 +15,9 @@ pipeline{
         }
         stage('pubat images to dockerhub'){
             steps{
-                script {
-                    withCredentials([string(credentialsId: 'docker-token', variable: 'DOCKER_PAT'),
-                                    string(credentialsId: 'docker-user', variable: 'DOCKER_USER')]) {
-                        bat '''
-                        echo $DOCKER_PAT | docker login --username $DOCKER_USER --password-stdin
-                        '''
-                }
-                }
                 bat 'echo $DOCKER_USER'
                 bat 'echo $DOCKER_PAT'
-                // bat 'echo $DOCKER_PAT | docker login --username $DOCKER_USER --password-stdin'
+                bat 'echo $DOCKER_PAT | docker login --username $DOCKER_USER --password-stdin'
                 bat 'docker pubat dockermeet872/backend'
                 bat 'docker pubat dockermeet872/frontend'
             }
