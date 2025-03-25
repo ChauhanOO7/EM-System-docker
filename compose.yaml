@@ -11,5 +11,3 @@ services:
     image: dockermeet872/frontend
     ports:
       - "5000:80"
-    environment:
-      REACT_APP_backendurl : http://backend:8000
