@@ -15,7 +15,7 @@ const employroute=require("./routes/employ");
 const adminroute=require("./routes/admin");
 
 //database connectivity
-
+console.log(database_url);
 mongoose.connect(database_url).then(()=>{
     console.log("database is connected...");
 }).catch((err)=>{
