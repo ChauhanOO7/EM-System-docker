@@ -10,7 +10,7 @@ pipeline{
             steps{
                 bat 'docker --version'
                 bat 'docker build -t dockermeet872/backend ./backend'
-                bat 'docker build --build-arg REACT_APP_backendurl=http://backend:8000 -t dockermeet872/frontend ./frontend'
+                bat 'docker build --build-arg REACT_APP_backendurl=http://localhost:8000 -t dockermeet872/frontend ./frontend'
             }
         }
         stage('push images to dockerhub'){
