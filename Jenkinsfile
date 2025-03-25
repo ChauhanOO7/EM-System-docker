@@ -1,11 +1,11 @@
 pipeline{
-    agent: any
-    environment:{
+    agent any
+    environment{
         MONGO_URL: Credentials('Mongo-url')
         DOCKER_USER: Credentials('docker-user')
         DOCKER_PAT: Credentials('docker-token')
     }
-    stages:{
+    stages{
         stage('build images for backend and frontend'){
             steps{
                 sh 'docker build -t dockermeet872/backend ./backend'
