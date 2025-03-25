@@ -15,8 +15,8 @@ pipeline{
         }
         stage('pubat images to dockerhub'){
             steps{
-                bat 'echo "DOCKER_USER: $DOCKER_USER"'
-                bat 'echo "DOCKER_PAT: $DOCKER_PAT"'
+                bat 'echo $DOCKER_USER'
+                bat 'echo $DOCKER_PAT'
                 bat 'echo $DOCKER_PAT | docker login --username $DOCKER_USER --password-stdin'
                 bat 'docker pubat dockermeet872/backend'
                 bat 'docker pubat dockermeet872/frontend'
