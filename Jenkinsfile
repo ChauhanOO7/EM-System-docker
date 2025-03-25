@@ -17,7 +17,7 @@ pipeline{
             steps{
                 bat 'echo $DOCKER_USER'
                 bat 'echo $DOCKER_PAT'
-                bat '$DOCKER_PAT | docker login --username $DOCKER_USER --password-stdin'
+                bat 'echo docker login --username $DOCKER_USER --password-stdin $DOCKER_PAT'
                 bat 'docker pubat dockermeet872/backend'
                 bat 'docker pubat dockermeet872/frontend'
             }
