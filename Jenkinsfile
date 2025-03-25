@@ -8,6 +8,7 @@ pipeline{
     stages{
         stage('build images for backend and frontend'){
             steps{
+                sh 'docker --version'
                 sh 'docker build -t dockermeet872/backend ./backend'
                 sh 'docker build -t dockermeet872/frontend ./frontend'
             }
