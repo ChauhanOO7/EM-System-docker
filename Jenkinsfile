@@ -8,28 +8,28 @@ pipeline{
     stages{
         stage('build images for backend and frontend'){
             steps{
-                sh 'docker --version'
-                sh 'docker build -t dockermeet872/backend ./backend'
-                sh 'docker build -t dockermeet872/frontend ./frontend'
+                bat 'docker --version'
+                bat 'docker build -t dockermeet872/backend ./backend'
+                bat 'docker build -t dockermeet872/frontend ./frontend'
             }
         }
-        stage('push images to dockerhub'){
+        stage('pubat images to dockerhub'){
             steps{
-                sh 'echo "$DOCKER_PAT" | docker login --username $DOCKER_USER --password-stdin'
-                sh 'docker push dockermeet872/backend'
-                sh 'docker push dockermeet872/frontend'
+                bat 'echo "$DOCKER_PAT" | docker login --username $DOCKER_USER --password-stdin'
+                bat 'docker pubat dockermeet872/backend'
+                bat 'docker pubat dockermeet872/frontend'
             }
         }
         stage('deploy'){
             steps{
-                sh 'docker compose up -d'
+                bat 'docker compose up -d'
             }
 
         }
     }
     post{
         always{
-            sh 'docker logout'
+            bat 'docker logout'
         }
         success{
             echo 'Deployment successful!'
